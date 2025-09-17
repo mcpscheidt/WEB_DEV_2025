@@ -142,7 +142,7 @@ footer a:hover {
 /*Aqui comeca o css da pagina "sobre nos"*/
 .div_sobrenos{
     border: 2.3px solid #ff9900;
-    
+    margin-top: 30px;
     margin-bottom: 10px;
     border-radius: 5px;
     margin-right: 25%;
