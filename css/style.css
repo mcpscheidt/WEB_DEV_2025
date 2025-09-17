@@ -138,3 +138,33 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/*Aqui comeca o css da pagina "sobre nos"*/
+.div_sobrenos{
+    border: 2.3px solid #ff9900;
+    
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 25%;
+    margin-left: 25%;
+    height: auto    ;
+    width: 700px;
+    padding-left: 50px;
+    padding-top: 30px;
+    box-sizing: content-box;
+    background-color: rgb(244, 244, 244);
+}
+
+.titulo_sobrenos{
+    color: #232f3e;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 30%;
+  font-style: normal;
+}
+.conteudo_sobrenos{
+    text-align: justify;
+    padding-right: 40px;
+    
+}
+/*Aqui acaba o css da pagina "sobre nos"*/
