@@ -1,17 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introdução</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header><h1>Cibersegurança</h1></header>
-    <nav>
-        <a href="pages/didatico.html">Material</a>
-        <a href="pages/ferramentas.html">Ferramentas</a>
-        <a href="pages/galeria.html">Galeria</a>
-        <a href="pages/ctf.html">Capture the Flag</a>
-    </nav>
+    <header>
+        <h1>Cibersegurança</h1>
+        <nav>
+            <a href="pages/didatico.html">Material</a>
+            <a href="pages/ferramentas.html">Ferramentas</a>
+            <a href="pages/galeria.html">Galeria</a>
+            <a href="pages/ctf.html">Capture the Flag</a>
+        </nav>
+    </header>
+
+        <main>
+            <section id="intro">
+                <h2>Bem-vindo ao Portal de Cibersegurança</h2>
+                <p>Este site é um ponto de partida para quem deseja aprender sobre cibersegurança. Aqui você encontra materiais didáticos, ferramentas, exemplos reais e desafios para testar seus conhecimentos!</p>
+            </section>
+
+            <section id="conceitos">
+                <h2>Conceitos Iniciais</h2>
+                <ul>
+                    <li><strong>Confidencialidade:</strong> Proteção das informações contra acesso não autorizado.</li>
+                    <li><strong>Integridade:</strong> Garantia de que os dados não foram alterados indevidamente.</li>
+                    <li><strong>Disponibilidade:</strong> Assegurar que os dados estejam acessíveis quando necessário.</li>
+                </ul>
+            </section>
+
+            <section id="galeria">
+                <h2>Galeria de Exemplos de Phishing</h2>
+                <div class="galeria">
+                    <img src="img/phishing1.png" alt="Exemplo de Phishing 1" width="200">
+                    <img src="img/phishing2.png" alt="Exemplo de Phishing 2" width="200">
+                    <img src="img/phishing3.png" alt="Exemplo de Phishing 3" width="200">
+                </div>
+                <p>Esses são exemplos reais de tentativas de phishing. Observe os detalhes suspeitos!</p>
+            </section>
+
+            <section id="formulario">
+                <h2>Participe!</h2>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" required><br>
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select><br>
+                    <label for="ataque">Já sofreu um ciberataque?</label>
+                    <select id="ataque" name="ataque">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select><br>
+                    <label for="interesse">Tem interesse na área?</label>
+                    <select id="interesse" name="interesse">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+
+            <section id="materiais">
+                <h2>Materiais Didáticos</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Nome</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Site</td>
+                            <td>OWASP</td>
+                            <td><a href="https://owasp.org/" target="_blank">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Livro</td>
+                            <td>Segurança em Redes</td>
+                            <td><a href="#">Ver</a></td>
+                        </tr>
+                        <tr>
+                            <td>Curso</td>
+                            <td>Coursera Cybersecurity</td>
+                            <td><a href="https://www.coursera.org/browse/information-technology/cybersecurity" target="_blank">Acessar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="ferramentas">
+                <h2>Ferramentas de Cibersegurança</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Software</th>
+                            <th>Descrição</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Wireshark</td>
+                            <td>Análise de tráfego de rede</td>
+                            <td><a href="https://www.wireshark.org/" target="_blank">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Metasploit</td>
+                            <td>Testes de penetração</td>
+                            <td><a href="https://www.metasploit.com/" target="_blank">Acessar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="geolocalizacao">
+                <h2>Geolocalização</h2>
+                <button onclick="getLocation()">Mostrar minha localização</button>
+                <p id="local"></p>
+                <script>
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function(position) {
+                                document.getElementById('local').innerText = `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+                            });
+                        } else {
+                            document.getElementById('local').innerText = "Geolocalização não suportada.";
+                        }
+                    }
+                </script>
+            </section>
+
+            <section id="ctf">
+                <h2>Capture the Flag</h2>
+                <p>Participe do nosso desafio CTF e teste seus conhecimentos em cibersegurança! <a href="pages/ctf.html">Clique aqui para começar</a>.</p>
+            </section>
+        </main>
+
+    <footer>
+           <p>&copy; 2025 Cibersegurança para Iniciantes</p>
+           <p>Contato: <i>contato@unespcybersec.com</i></p>
+           <p>
+              Siga-nos:
+              <a href="https://twitter.com/seuprojeto" target="_blank">Twitter</a> |
+              <a href="https://instagram.com/seuprojeto" target="_blank">Instagram</a>
+           </p>
+           <p>Desenvolvido por mcpscheidt</p>
+    </footer>
 </body>
+
 </html>
