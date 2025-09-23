@@ -5,10 +5,17 @@
     --text-color: #222;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: var(--background-color);
-    margin: 0;
     color: var(--text-color);
 }
 
@@ -47,6 +54,9 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     padding: 30px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -150,8 +160,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
     font-size: 1em;
+    margin-top: auto;
 }
 
 footer a {
