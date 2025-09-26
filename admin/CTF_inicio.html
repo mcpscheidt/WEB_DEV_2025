@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css" type="text/css" />
+    <title>Painel do Administrador</title>
+    <link rel="shortcut icon" href="/icons/admin-icon.ico"/>
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="#" class="nav-link active" data-section="dashboard">📊 Dashboard</a></li>
+                <li><a href="#" class="nav-link" data-section="users">👥 Usuários</a></li>
+                <li><a href="#" class="nav-link" data-section="content">🚫 Plano B</a></li>
+                <li><a href="#" class="nav-link" data-section="security">🔐 Segurança</a></li>
+                <li><a href="#" class="nav-link" data-section="logs">📋 Logs</a></li>
+                <li><a href="#" class="nav-link" data-section="settings">⚙️ Configurações</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1 id="section-title">Dashboard</h1>
+            </div>
+
+            <section id="dashboard" class="admin-section active">
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Total de Usuários</h3>
+                        <div class="number">10</div>
+                    </div>
+                    <div class="card">
+                        <h3>CTFs Ativos</h3>
+                        <div class="number">9</div>
+                    </div>
+                    <div class="card">
+                        <h3>Ferramentas</h3>
+                        <div class="number">#</div>
+                    </div>
+                    <div class="card">
+                        <h3>Uptime Sistema</h3>
+                        <div class="number">99.8%</div>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Atividade Recente</th>
+                                <th>Usuário</th>
+                                <th>Horário</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Novo usuário registrado</td>
+                                <td>marcos.betoni@unesp.br</td>
+                                <td>15:15</td>
+                                <td><span class="status-badge status-active">Sucesso</span></td>
+                            </tr>
+                            <tr>
+                                <td>Quase Explodiu o Sistema</td>
+                                <td>paulo.celsinho@unesp.br</td>
+                                <td>14:10</td>
+                                <td><span class="status-badge status-inactive">Bloqueado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ativando Inicio do Minicurso</td>
+                                <td>pscheidt.pistache@unesp.br</td>
+                                <td>14:00</td>
+                                <td><span class="status-badge status-active">Completado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="users" class="admin-section">
+                <div style="margin-bottom: 20px;">
+                    <button class="btn btn-primary">Adicionar Usuário</button>
+                    <button class="btn btn-success">Exportar Lista</button>
+                </div>
+
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Tipo</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Paulo Celso</td>
+                                <td>paulo.celsinho@unesp.br</td>
+                                <td>Administrador</td>
+                                <td><span class="status-badge status-active">Ativo</span></td>
+                                <td>
+                                    <button class="btn btn-primary">✏️</button>
+                                    <button class="btn btn-danger">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Matheus Pscheidt</td>
+                                <td>pscheidt.pistache@unesp.br</td>
+                                <td>Administrador</td>
+                                <td><span class="status-badge status-active">Ativo</span></td>
+                                <td>
+                                    <button class="btn btn-primary">✏️</button>
+                                    <button class="btn btn-danger">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Marcos Betoni</td>
+                                <td>marcos.betoni@unesp.br</td>
+                                <td>Usuário</td>
+                                <td><span class="status-badge status-inactive">Banido</span></td>
+                                <td>
+                                    <button class="btn btn-primary">✏️</button>
+                                    <button class="btn btn-danger">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px;">
+                    <h3>Login Especial</h3>
+                    <div style="max-width: 300px;">
+                        <div style="margin-bottom: 15px;">
+                            <label>Usuário:</label>
+                            <input type="text" id="special-username" style="width: 100%; padding: 8px; margin-top: 5px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label>Senha:</label>
+                            <input type="password" id="special-password" style="width: 100%; padding: 8px; margin-top: 5px;">
+                        </div>
+                        <button onclick="checkSpecialLogin()" class="btn btn-primary">Entrar</button>
+                    </div>
+                </div>
+            </section>
+            </section>
+
+            <section id="content" class="admin-section">
+                
+                <button class="btn btn-primary">Lançar Míssil na Discente 0</button>
+                <button class="btn btn-primary">Explodir o Site</button>
+                <button class="btn btn-primary">Queimar o Servidor</button>
+                <button class="btn btn-primary">Apagar Rastros</button>
+
+                <p class="invisible">h_ehzbg_xa_UhuurLbgzxk_x_t_lxgat_xa_LxgatFnbmhYhkmx - 01100011 01101001 01100110 01110010 01100001 00100000 01100100 01100101 00100000 01100011 01100101 01110011 01100001 01110010 00100000 01100011 01101111 01101101 00100000 01100100 01100101 01110011 01101100 01101111 01100011 01100001 01101101 01100101 01101110 01110100 01101111 00100000 00110001 00110000 </p>
+
+            </section>
+
+            <section id="security" class="admin-section">
+                <h2>Configurações de Segurança</h2>
+                
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Tentativas de Login</h3>
+                        <div class="number">12</div>
+                        <div class="description">Última hora</div>
+                    </div>
+                    <div class="card">
+                        <h3>IPs Bloqueados</h3>
+                        <div class="number">3</div>
+                        <div class="description">Atividade suspeita</div>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IP Address</th>
+                                <th>Tentativas</th>
+                                <th>Última Tentativa</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>192.168.1.100</td>
+                                <td>5</td>
+                                <td>14:30</td>
+                                <td><span class="status-badge status-inactive">Bloqueado</span></td>
+                                <td><button class="btn btn-success">Desbloquear</button></td>
+                            </tr>
+                            <tr>
+                                <td>10.0.0.50</td>
+                                <td>3</td>
+                                <td>13:45</td>
+                                <td><span class="status-badge status-active">Monitorando</span></td>
+                                <td><button class="btn btn-danger">Bloquear</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="logs" class="admin-section">
+                <h2>Logs do Sistema</h2>
+                <div class="logs-container">
+                    <div class="log-entry log-info">[2025-09-25 14:35:22] INFO: Sistema iniciado com sucesso</div>
+                    <div class="log-entry log-success">[2025-09-25 14:34:18] SUCCESS: Usuário ####### logado</div>
+                    <div class="log-entry log-warning">[2025-09-25 14:33:45] WARNING: Tentativa de acesso a área restrita</div>
+                    <div class="log-entry log-error">[2025-09-25 14:32:10] ERROR: Falha na conexão com banco de dados</div>
+                    <div class="log-entry log-info">[2025-09-25 14:31:55] INFO: Backup automático executado</div>
+                    <div class="log-entry log-success">[2025-09-25 14:30:30] SUCCESS: CTF "/admin.html" completado. Flag "Bohemian_Rhapsoy"</div>
+                    <div class="log-entry log-warning">[2025-09-25 14:29:15] WARNING: IP 192.168.1.100 bloqueado por múltiplas tentativas</div>
+                    <div class="log-entry log-info">[2025-09-25 14:28:44] INFO: Novo usuário registrado: marcos.betoni@unesp.br</div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <button class="btn btn-primary">Exportar Logs</button>
+                    <button class="btn btn-danger">Limpar Logs</button>
+                </div>
+            </section>
+
+            <section id="settings" class="admin-section">
+                <h2>Configurações do Sistema</h2>
+                
+                <div class="form-group">
+                    <label>Nome do Site</label>
+                    <input type="text" value="Cibersegurança - CTF Platform">
+                </div>
+                
+                <div class="form-group">
+                    <label>Email do Administrador</label>
+                    <input type="email" value="admin@ciberseguranca.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>Modo de Manutenção</label>
+                    <select>
+                        <option>Desativado</option>
+                        <option>Ativado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Limite de Tentativas de Login</label>
+                    <input type="number" value="5">
+                </div>
+                
+                <div class="form-group">
+                    <label>Tempo de Sessão (minutos)</label>
+                    <input type="number" value="30">
+                </div>
+                
+                <button class="btn btn-primary">Salvar Configurações</button>
+                <button class="btn btn-danger">Restaurar Padrões</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="/scripts/admin_panel.js"></script>
+</body>
+</html>
