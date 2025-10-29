@@ -97,7 +97,45 @@
             </section>
             <section>
                 <h2>Termos Utilizados</h2>
-                
+                <ul>
+                    <li><b><u>Portas TCP/UDP:</u></b> Números (0-65535) usados por protocolos de transporte para identificar serviços em uma máquina. TCP é orientado a conexão (retransmissão, ordem garantida); UDP é sem conexão (mais rápido, sem garantia de entrega).</li>
+                        <br>
+                    <li><b><u>Scripts NSE:</u></b> Pequenos scripts em Lua usados pelo Nmap para automatizar tarefas de varredura: detecção de versão, vulnerabilidades, brute-force, coleta de informações, etc.</li>
+                        <br>
+                    <li><b><u>Reassembly:</u></b> Reconstrução de dados fragmentados (por exemplo, segmentos TCP ou pacotes IP fragmentados) em seu fluxo original para análise ou inspeção profunda de pacotes.</li>
+                    <br>
+                    <li><b><u>Exploits:</u></b> Códigos ou técnicas que tiram vantagem de uma vulnerabilidade em software/hardware para executar comportamento não autorizado (ex.: execução remota, elevação de privilégios).</li>
+                    <br>
+                    <li><b><u>Payloads:</u></b> A carga útil entregue por um exploit — pode ser um shell reverso, um backdoor, um comando para execução, etc. Em pentest, é o que realmente faz a ação após explorar a falha.</li>
+                    <br>
+                    <li><b><u>Hashes:</u></b> Resultados de funções de resumo (MD5, SHA-1, SHA-256, etc.) que mapeiam dados de tamanho arbitrário para uma cadeia fixa; usados para integridade, verificação de senhas (com salt) e identificação de arquivos.</li>
+                    <br>
+                    <li><b><u>HTTP/HTTPS:</u></b> HTTP: protocolo de aplicação para transferência de hipertexto (web) sem criptografia.
+HTTPS: HTTP sobre TLS/SSL — comunica-se de forma cifrada e autenticada (confidencialidade e integridade).</li>
+                    <br>
+                    <li><b><u>Proxy:</u></b> Intermediário entre cliente e servidor que encaminha requisições; pode anonimizar, filtrar, armazenar cache ou inspecionar tráfego (ex.: proxy HTTP, SOCKS).</li>
+                    <br>
+                    <li><b><u>Fuzzing:</u></b> Técnica automatizada de teste que envia entradas inesperadas/aleatórias a um programa/protocolo para descobrir falhas como crashes, vazamentos de memória ou comportamentos inseguros.</li>
+                    <br>
+                    <li><b><u>Plugins:</u></b> Componentes adicionais que estendem funcionalidades de uma aplicação ou ferramenta (ex.: plugins de navegador, módulos de scanner que adicionam checagens).</li>
+                    <br>
+                    <li><b><u>Verificação de Patch:</u></b> Processo de checar se sistemas/softwares receberam atualizações (patches) que corrigem vulnerabilidades conhecidas; pode ser via inventário, hashes de versão ou checagem de CVE aplicadas.</li>
+                    <br>
+                    <li><b><u>Base CVE:</u></b> Repositório/identificadores padrão (CVE-IDs) para vulnerabilidades públicas conhecidas, usado para referenciar e rastrear falhas de segurança.</li>
+                    <br>
+                    <li><b><u>SSH/FTP/SMB:</u></b> SSH: acesso remoto seguro com criptografia e autenticação. FTP: transferência de arquivos; pode ser inseguro (texto plano) a menos que use TLS. SMB: protocolo de arquivos/recursos em redes Windows (compartilhamento de arquivos, impressoras); versão insegura (sem proteção) pode permitir acesso indevido.</li>
+                    <br>
+                    <li><b><u>Controle de Threads:</u></b> Mecanismo em programas para gerenciar execução concorrente (criação, sincronização, limite de threads, filas de trabalho) — importante para desempenho e safety em scanners/servidores.</li>
+                    <br>
+                    <li><b><u>URIs:</u></b> Strings que identificam recursos, inclui URLs (endereço localizável) e URNs (nome persistente).</li>
+                    <br>
+                    <li><b><u>Subdomínios DNS:</u></b> Entradas DNS que representam divisões de um domínio principal; investigação de subdomínios é comum em reconhecimento de rede.</li>
+                    <br>
+                    <li><b><u>Amazon S3:</u></b> Serviço de armazenamento de objetos da AWS; permite armazenar/recuperar arquivos via APIs HTTP(S). Pode conter buckets públicos ou privados — configuração incorreta leva a exposição de dados.</li>
+                    <br>
+                    <li><b><u>Servidores TFTP</u></b> Trivial File Transfer Protocol — protocolo simples para transferência de arquivos (boot, firmware). Funciona sobre UDP e não oferece autenticação nem criptografia — risco se exposto.</li>
+                    <br>
+                </ul>
             </section>
         </main>
     </body>
