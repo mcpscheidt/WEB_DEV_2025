@@ -187,20 +187,35 @@ table tr:nth-child(even) {
     background: var(--background-color);
 }
 
-#geolocalizacao button {
-    background: var(--secondary-color);
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: background 0.2s;
+#geolocalizacao {
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-#geolocalizacao button:hover {
-    background: var(--header-color);
+#geolocalizacao h3 {
+    color: var(--header-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+#resultadoGeo {
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+#resultadoGeo p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+#resultadoGeo strong {
+    color: #667eea;
 }
 
 footer {

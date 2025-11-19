@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introdução</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="icon" type="image/x-icon" href="/icons/icone.png">
   </head>
 
   <body>
     <div id="header-placeholder"></div>
     <main>
+      <section id="geolocalizacao">
+          <h3>Será que você está escondido mesmo? Encontramos sua localização...</h3>
+          <button id="btnGeolocalizacao" style="display: none;">Permitir Acesso à Localização</button>
+          <div id="resultadoGeo" style="display: none;">
+            <p><strong>Latitude:</strong> <span id="latitude">-</span></p>
+            <p><strong>Longitude:</strong> <span id="longitude">-</span></p>
+            <p id="endereco"><strong>Localização:</strong> <span id="enderecotexto">Carregando...</span></p>
+          </div>
+          <div id="map" style="height:320px; margin-top:10px; display:none;"></div>
+          <div id="erroGeo" style="display: none; color: #d32f2f; padding: 10px; background: #ffebee; border-radius: 4px;"></div>
+        </section>
       <section id="apresentacao">
         <h2>Bem-vindo ao Portal da Cibersegurança</h2>
         <p>
@@ -55,5 +67,7 @@
 
     <div id="footer-placeholder"></div>
     <script src="scripts/load_default.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="scripts/geolocation.js"></script>
   </body>
 </html>
